@@ -1,0 +1,42 @@
+.navbar{
+  background: #006400;
+  &__logo{
+    padding: 20px 0;
+    background: url("./assets/wheat.jpg") bottom/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    div{
+      background: #fff;
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    img{
+      width: 100px;
+      height: 100px;
+    }
+  }
+  &__list{
+    padding: 10px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__link{
+    color: #fff;
+    font-size: 13px;
+    font-weight: 400;
+    cursor: pointer;
+    &:hover{
+      color: #00ff0a;
+    }
+  }
+}
+
+
+
+
+

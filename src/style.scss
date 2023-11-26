@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Times New Roman', sans-serif;
+  font-weight: 400;
+  transition: all 0.5s;
+}
+
+.container{
+  max-width: 1140px;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+.title{
+  font-weight: 700;
+  font-size: 24px;
+}
+.subtitle{
+  font-weight: 400;
+  font-size: 18px;
+}
+img{
+  width: 100%;
+}
+.logo{
+  display: flex;
+  column-gap: 15px;
+  align-items: center;
+  &__title{
+    font-weight: 700;
+    color: aliceblue;
+    &:hover{
+      color: darkorange;
+    }
+  }
+  &__img{
+    width: 50px;
+    height: 50px;
+  }
+}
+.btn{
+  width: 200px;
+  height: 50px;
+  display: flex;
+  border-radius: 25px;
+  align-items: center;
+  justify-content: center;
+  background-color: #551A8B;
+  border: 1px solid #551A8B;
+  &:hover{
+    background-color: transparent;
+    .third__link{
+      color: #551A8B;
+    }
+    .fourth__link{
+      color: green;
+    }
+  }
+}
+
+.year{
+  &__select{
+    margin-right: 20px;
+    padding: 10px 20px;
+    border: 1px solid #000;
+    font-size: 20px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+  }
+  &__option{
+    padding: 10px 10px;
+    border: 1px solid #000;
+    font-size: 20px;
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .container{
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .year__select{
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+  .year__option{
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+}
+
+@import "components/Navbar/navbar";
+@import "./components/Header/header";
+@import "./components/First/first";
+@import "./components/Second/second";
+@import "./components/Third/third";
+@import "./components/Files/Files";
+@import "./components/fifth/fifth";
+@import "./components/Footer/footer";
+@import "./pages/OAD/oad";
+@import "./pages/OPDX/opdx";
+@import "./components/Director/director.scss";
+@import "./pages/POU/pou.scss";
+@import "./components/News/news";
+@import "./pages/News/News";
+@import "./pages/POP/pop.scss";

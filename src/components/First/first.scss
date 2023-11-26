@@ -1,0 +1,49 @@
+.first{
+  padding: 50px 0 50px;
+  border-bottom: 1px solid darkgray;
+  overflow: hidden;
+  position: relative;
+  .subtitle{
+    margin: 10px 0 24px;
+  }
+  &__img{
+    &:hover{
+      opacity: 0.5;
+    }
+  }
+  &__one{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    cursor: pointer;
+    &-right{
+      left: calc(100% - 60px);
+    }
+  }
+  &__tree{
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+  }
+}
+
+@media (max-width: 1200px) {
+  .first__one{
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 480px) {
+
+}
+

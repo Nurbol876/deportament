@@ -1,0 +1,49 @@
+.third{
+  padding: 50px 0 50px;
+  border-bottom: 1px solid darkgray;
+  .subtitle{
+    margin-top: 20px;
+  }
+  &__content{
+    background: url(./assets/ornament_25.gif);
+    background-repeat: repeat-y;
+    background-color: white;
+    padding: 0 30px;
+  }
+  &__link{
+    font-size: 24px;
+    color: white;
+  }
+  &__item{
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__btn{
+    border: 1px solid #006400;
+    background: #006400;
+    padding: 7px 5px;
+    color: #fff;
+    border-radius: 15px;
+    &:hover{
+      background: transparent;
+      color: #006400;
+    }
+    &-two{
+      position: absolute;
+      z-index: -1;
+      left: 175px;
+      border: 1px solid #006400;
+      background: #006400;
+      padding: 7px 5px;
+      color: #fff;
+      border-radius: 15px;
+      margin-top: 20px;
+      &:hover{
+        background: transparent;
+        color: #006400;
+      }
+    }
+  }
+}

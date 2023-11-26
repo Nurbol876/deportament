@@ -1,0 +1,65 @@
+.OAD{
+  padding: 50px 0;
+  .title{
+    text-align: center;
+    margin-bottom: 25px;
+}
+  &__cart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+  &__right{
+    position: relative;
+}
+  &__table{
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+  &__td{
+    padding: 20px 5px;
+    border: 2px solid black;
+    font-size: 16px;
+    text-align: center;
+}
+  &__title{
+    font-size: 18px;
+      color: white;
+}
+  &__desk{
+    color: white;
+    font-size: 20px;
+}
+  &__info{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 25%, rgba(9,120,121,1) 67%, rgba(8,128,133,1) 70%, rgba(0,212,255,1) 100%);
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    column-gap: 8px;
+    align-items: center;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    margin: 0 auto;
+}
+}
+.wrap{
+  margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+.OAD{
+  .title{
+    font-size: 17px;
+}
+  &__title{
+    font-size: 14px;
+}
+  &__td{
+    padding: 15px 3px;
+    font-size: 12px;
+}
+}
+}

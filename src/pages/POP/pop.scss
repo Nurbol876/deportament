@@ -1,0 +1,39 @@
+.pop{
+  padding: 40px 0 60px;
+  &__table{
+    border-collapse: collapse;
+  }
+  &__td{
+    border: 1px solid black;
+    padding: 15px 10px;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 992px) {
+  .pop__td {
+    padding: 10px 5px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pop__td {
+    padding: 0 0;
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 425px) {
+  .pop__td {
+    font-size: 7px;
+  }
+}
+
+@media (max-width: 375px) {
+  .pop__td {
+    font-size: 6px;
+  }
+}
