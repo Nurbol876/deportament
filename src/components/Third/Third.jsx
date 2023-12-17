@@ -11,12 +11,12 @@ const Third = () => {
             <div className="container">
                 <div className="third__content">
                     <h3 className="title wow fadeInDown">
-                        {t("Home.Third.title")}
+                        {t("Third.title")}
                     </h3>
-                    <p dangerouslySetInnerHTML={{__html:t("Home.Third.subtitle1")}} className="subtitle"/>
-                    <p dangerouslySetInnerHTML={{__html:text? t("Home.Third.subtitle2"): ''}} className="subtitle"/>
+                    <p dangerouslySetInnerHTML={{__html:t("Third.subtitle1")}} className="subtitle"/>
+                    <p dangerouslySetInnerHTML={{__html:text? t("Third.subtitle2"): ''}} className="subtitle"/>
                     <button onClick={() => setText(!text)} className="third__btn">
-                        {text? t("Home.Third.btn2") : t("Home.Third.btn1")}
+                        {text? t("Third.btn2") : t("Third.btn1")}
                     </button>
                     <div className="third__item">
                         <button className="btn">

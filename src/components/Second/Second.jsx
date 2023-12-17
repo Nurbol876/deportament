@@ -14,7 +14,7 @@ const Second = () => {
                      data-wow-iteration="9999"/>
                     <div className="container">
                         <div className="second__content">
-                            <h2 dangerouslySetInnerHTML={{__html: t("Home.Second.title")}} className="title wow fadeInLeftBig"/>
+                            <h2 dangerouslySetInnerHTML={{__html: t("Second.title")}} className="title wow fadeInLeftBig"/>
                             <img src={plant} alt="plant"
                                  className="second__img wow fadeInRightBig"/>
                         </div>

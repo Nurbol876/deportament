@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Link, NavLink} from "react-router-dom";
+import {Link, NavLink, useNavigate} from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import logo from './assets/logo.jpg';
 import x from './assets/x.svg'
@@ -10,6 +10,8 @@ const Header = () => {
     const {t, i18n} = useTranslation();
 
     const [clas, setClas] = useState(false)
+
+    const navigate = useNavigate()
 
     const changesLanguage = (lang) => {
         i18n.changeLanguage(lang);
@@ -60,6 +62,11 @@ const Header = () => {
                             <NavLink to='/world' className="header__link">
                                 {t("Header.link4")}
                             </NavLink>
+                        </li>
+                        <li className="header__item">
+                            <button onClick={() => navigate("/login")} className="header__btn">
+                                {t("Header.btn")}
+                            </button>
                         </li>
                     </ul>
             </aside>

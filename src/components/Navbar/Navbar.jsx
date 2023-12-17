@@ -1,9 +1,13 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import {useTranslation} from "react-i18next";
 import logo from './assets/logo.jpg';
 import Contacts from "./Contacts";
+import {Link} from "react-router-dom";
+import {CustomContext} from "../../Context";
 
 const Navbar = () => {
+
+    const{ images } = useContext(CustomContext)
 
     const [contact, setContact] = useState(false)
 
@@ -14,9 +18,9 @@ const Navbar = () => {
             <Contacts active={contact}/>
             <ul className="navbar__list">
                 <li>
-                    <a href="#fifth" className="navbar__link">
+                    <Link to="/map" className="navbar__link">
                         {t("Navbar.link1")}
-                    </a>
+                    </Link>
                 </li>
                 <li>
                     <a target="_blank" href="https://agro.gov.kg/ru/main/" className="navbar__link">
@@ -31,7 +35,7 @@ const Navbar = () => {
             </ul>
             <div className="navbar__logo">
                 <div>
-                    <img src={logo} alt=""/>
+                    <img src={t("images.logo")} alt=""/>
                 </div>
             </div>
         </nav>

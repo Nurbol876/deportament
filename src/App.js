@@ -9,8 +9,10 @@ import Pou from "./pages/POU/POU";
 import Opdx from "./pages/OPDX/OPDX";
 import Oad from "./pages/OAD/OAD";
 import Footer from "./components/Footer/Footer";
-import News from "./pages/News/News";
-import AddNews from "./pages/addNews/addNews";
+import Admin from "./pages/AdminOfDep/Admin";
+import Fifth from "./components/Fifth/Fifth";
+import Login from "./pages/Login/Login";
+import Register from "./pages/Register/Register";
 
 const App = () => {
 
@@ -20,10 +22,14 @@ const App = () => {
             <Header/>
             <Routes>
                 <Route path='/' element={<Home/>}/>
+                <Route path='/admin' element={<Admin/>}/>
+                <Route path='/map' element={<Fifth/>}/>
                 <Route path='/world' element={<Pop/>}/>
                 <Route path='/makers' element={<Pou/>}/>
                 <Route path='/organic' element={<Opdx/>}/>
                 <Route path='/depor' element={<Oad/>}/>
+                <Route path='/login' element={<Login/>}/>
+                <Route path='/reg' element={<Register/>}/>
             </Routes>
             <Footer/>
         </>

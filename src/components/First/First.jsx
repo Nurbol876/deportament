@@ -13,9 +13,9 @@ const First = () => {
                  data-wow-iteration="9999"/>
                 <div className="container">
                     <h1 className="title wow fadeInDown">
-                        {t("Home.First.title")}
+                        {t("First.title")}
                     </h1>
-                    <h4 dangerouslySetInnerHTML={{__html: t("Home.First.subtitle")}} className="subtitle wow fadeInDown"/>
+                    <h4 dangerouslySetInnerHTML={{__html: t("First.subtitle")}} className="subtitle wow fadeInDown"/>
                     <img src={peoples} alt="peoples" className="first__img  wow fadeInDown"/>
                 </div>
                 <img src={plant} alt="plant" className="first__one first__one-right wow swing" data-wow-iteration="9999"/>

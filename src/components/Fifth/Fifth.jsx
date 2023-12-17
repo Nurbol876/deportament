@@ -10,7 +10,7 @@ const Fifth = () => {
         <section id="fifth" className="fifth">
             <div className="container wow bounceInUp">
                 <h5 className="title">
-                    {t("Home.Fifth.title")}
+                    {t("Fifth.title")}
                 </h5>
                 <div className="fifth__maps">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1504.804503107765!2d74.60349500792779!3d42.87429416203299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389eb7db5d769e59%3A0x78401ee4c5d9cf2d!2z0JDQs9GA0L7Qv9GA0L7QvCwg0YPQuy4g0KDQsNC30LfQsNC60L7QstCwLCDQkdC40YjQutC10Lo!5e0!3m2!1sru!2skg!4v1685714122133!5m2!1sru!2skg" width="500" height="420" style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">

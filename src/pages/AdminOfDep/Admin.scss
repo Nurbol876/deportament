@@ -1,0 +1,39 @@
+.admin{
+  margin: 50px 0;
+  &__title{
+    font-size: 50px;
+    text-align: center;
+    margin: 10px 0;
+    text-transform: uppercase;
+  }
+  &__form{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-flow: column;
+    column-gap: 50px;
+    input{
+      padding: 15px 20px;
+      border: 1px solid black;
+      margin: 0 0 20px;
+      border-radius: 50px;
+      &::placeholder{
+        color: #aeaeae;
+        font-size: 20px;
+      }
+    }
+  }
+  &__btn{
+    background: green;
+    color: white;
+    border: 1px solid green;
+    padding: 10px 15px;
+    font-size: 20px;
+    width: 300px;
+    margin: 0 auto;
+    border-radius: 2px;
+    &:hover{
+      background: transparent;
+      color: green;
+    }
+  }
+}
