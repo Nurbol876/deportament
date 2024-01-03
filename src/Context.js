@@ -1,21 +1,10 @@
 import React, {createContext, useEffect, useState} from "react";
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
-import logo from "./components/Header/assets/logo.jpg"
-import firstImg from "./components/First/assets/peoples.jpeg"
-import secondImg from "./components/Second/assets/plant.jpg"
-import director from "./components/Director/assets/director.jpg"
 
 export const CustomContext = createContext()
 
 export const Context = (props) => {
-
-    const images = {
-        logo: "C://Users/Win10/Desktop/react-direc/logos2/src/componentsNavbar/assets/logo.jpg",
-        firstImg: "./assets/peoples.jpeg",
-        secondImg: "./assets/plant.jpg",
-        director: "./assets/director.jpg"
-}
 
     const navigate = useNavigate()
 
@@ -59,7 +48,7 @@ export const Context = (props) => {
                 }
             })
             .catch(error => {
-                console.error(error);
+                alert(error);
             });
     };
 
@@ -71,16 +60,23 @@ export const Context = (props) => {
             name: '',
         })
     }
+    const [img, setImg] = useState({})
+
+    useEffect(() => {
+        axios("http://localhost:5555/images")
+            .then((res) => setImg(res.data))
+            .catch((err) => console.error(err))
+    }, [])
 
     const value = {
         user,
         setUser,
         setGmailLogin,
         setPasswordLogin,
+        img,
         reqisterUser,
         LogOutUser,
-        logIn,
-        images
+        logIn
     }
 
 

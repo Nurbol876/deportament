@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {Routes, Route} from 'react-router-dom'
 import './i18n'
 import Navbar from "./components/Navbar/Navbar";
@@ -13,8 +13,11 @@ import Admin from "./pages/AdminOfDep/Admin";
 import Fifth from "./components/Fifth/Fifth";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
+import {CustomContext} from "./Context";
 
 const App = () => {
+
+    const {user} = useContext(CustomContext)
 
     return (
         <>
@@ -22,7 +25,9 @@ const App = () => {
             <Header/>
             <Routes>
                 <Route path='/' element={<Home/>}/>
-                <Route path='/admin' element={<Admin/>}/>
+                {
+                    user.name === "Admin" && user.email === "nurbolsagynbekov876@gmail.com" && user.password === "KGdeportament" ? (<Route path='/admin' element={<Admin/>}/>) : ""
+                }
                 <Route path='/map' element={<Fifth/>}/>
                 <Route path='/world' element={<Pop/>}/>
                 <Route path='/makers' element={<Pou/>}/>

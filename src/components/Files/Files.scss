@@ -6,6 +6,15 @@
   .mySwiper{
     padding-bottom:50px;
   }
+  &__input{
+    outline: none;
+    background: #006400;
+    border: none;
+    border-radius: 15%;
+    color: white;
+    font-size: 15px;
+    margin: 20px 0 30px;
+  }
   &__link{
     color: white;
     font-size: 14px;

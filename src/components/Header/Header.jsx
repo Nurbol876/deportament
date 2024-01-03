@@ -1,11 +1,15 @@
-import React, {useState} from 'react';
-import {Link, NavLink, useNavigate} from "react-router-dom";
+import React, {useContext, useState} from 'react';
+import {Link, NavLink, Route, Routes, useNavigate} from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import logo from './assets/logo.jpg';
 import x from './assets/x.svg'
 import menu from './assets/menu.svg'
+import {CustomContext} from "../../Context";
+import Admin from "../../pages/AdminOfDep/Admin";
 
 const Header = () => {
+
+    const {user, LogOutUser} = useContext(CustomContext)
 
     const {t, i18n} = useTranslation();
 
@@ -21,6 +25,9 @@ const Header = () => {
         <header className="header">
             <div className="container">
                 <nav className="header__nav">
+                    <h2 style={{position: "absolute", left: "50px", top: "20px"}} className="header__link">
+                        {user.name}
+                    </h2>
                     <div className="header__logo">
                         <Link to='/' className="logo">
                             {/*<img src={logo} alt="logo" className="logo__img"/>*/}
@@ -63,10 +70,27 @@ const Header = () => {
                                 {t("Header.link4")}
                             </NavLink>
                         </li>
+                        {
+                            user.name === "Admin" && user.email === "nurbolsagynbekov876@gmail.com" && user.password === "KGdeportament" ? (
+                                <li className="header__item">
+                                    <NavLink to='/admin' className="header__link">
+                                        admin
+                                    </NavLink>
+                                </li>
+                            ) : ""
+                        }
                         <li className="header__item">
-                            <button onClick={() => navigate("/login")} className="header__btn">
-                                {t("Header.btn")}
-                            </button>
+                            {
+                                user && user.name.length ? (
+                                    <button onClick={LogOutUser} className="header__btn">
+                                        {t("Header.btn2")}
+                                    </button>
+                                ) : (
+                                    <button onClick={() => navigate("/login")} className="header__btn">
+                                        {t("Header.btn1")}
+                                    </button>
+                                )
+                            }
                         </li>
                     </ul>
             </aside>

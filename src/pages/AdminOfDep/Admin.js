@@ -15,7 +15,10 @@ const Admin = () => {
     const[kyrgyzSecond, setKyrgyzSecond] = useState({})
     const[russiaThird, setRussiaThird] = useState({})
     const[kyrgyzThird, setKyrgyzThird] = useState({})
-    const[selectImage, setSelectImage] = useState()
+    const[russiaFiles, setRussiaFiles] = useState({})
+    const[kyrgyzFiles, setKyrgyzFiles] = useState({})
+    const[selectImage, setSelectImage] = useState({})
+    const[director, setDirector] = useState({})
 
     useEffect(() => {
         axios("http://localhost:8888/Header")
@@ -89,11 +92,29 @@ const Admin = () => {
             .catch((err) => alert(err))
     }, [])
 
-    const handleChange = (e) => {
-        e.preventDefault()
-        setSelectImage(e.target.value[0])
-        console.log(e.target.files)
-    }
+    useEffect(() => {
+        axios("http://localhost:8888/Files")
+            .then(({data}) => setRussiaFiles(data))
+            .catch((err) => alert(err))
+    }, [])
+
+    useEffect(() => {
+        axios("http://localhost:4444/Files")
+            .then(({data}) => setKyrgyzFiles(data))
+            .catch((err) => alert(err))
+    }, [])
+
+    useEffect(() => {
+        axios("http://localhost:5555/images")
+            .then(({data}) => setSelectImage(data))
+            .catch((err) => alert(err))
+    }, [])
+
+    useEffect(() => {
+        axios("http://localhost:5555/images")
+            .then(({data}) => setDirector(data))
+            .catch((err) => alert(err))
+    }, [])
 
     const onSubmitHeaderRussian = (e) => {
         e.preventDefault()
@@ -234,6 +255,63 @@ const Admin = () => {
             .then(res => console.log(res.data))
             .catch((err) => alert(err))
     }
+
+    const onSubmitFilesRussian = (e) => {
+        e.preventDefault()
+        axios.patch("http://localhost:8888/Files", {
+            "subtitle1": (e.target[0].value === "") ? russiaFiles.subtitle1 : e.target[0].value ,
+            "subtitle2": (e.target[1].value === "") ? russiaFiles.subtitle2 : e.target[1].value ,
+            "subtitle3": (e.target[2].value === "") ? russiaFiles.subtitle3 : e.target[2].value ,
+            "subtitle4": (e.target[3].value === "") ? russiaFiles.subtitle4 : e.target[3].value ,
+            "subtitle5": (e.target[4].value === "") ? russiaFiles.subtitle5 : e.target[4].value ,
+            "btn1": (e.target[5].value === "") ? russiaFiles.btn1 : e.target[5].value ,
+            "btn2": (e.target[6].value === "") ? russiaFiles.btn2 : e.target[6].value ,
+            "btn3": (e.target[3.5*2].value === "") ? russiaFiles.btn3 : e.target[7].value
+        })
+            .then(res => console.log(res.data))
+            .catch((err) => alert(err))
+    }
+
+    const onSubmitFilesKyrgyz = (e) => {
+        e.preventDefault()
+        axios.patch("http://localhost:4444/Files", {
+            "subtitle1": (e.target[0].value === "") ? kyrgyzFiles.subtitle1 : e.target[0].value ,
+            "subtitle2": (e.target[1].value === "") ? kyrgyzFiles.subtitle2 : e.target[1].value ,
+            "subtitle3": (e.target[2].value === "") ? kyrgyzFiles.subtitle3 : e.target[2].value ,
+            "subtitle4": (e.target[3].value === "") ? kyrgyzFiles.subtitle4 : e.target[3].value ,
+            "subtitle5": (e.target[4].value === "") ? kyrgyzFiles.subtitle5 : e.target[4].value ,
+            "btn1": (e.target[5].value === "") ? kyrgyzFiles.btn1 : e.target[5].value ,
+            "btn2": (e.target[6].value === "") ? kyrgyzFiles.btn2 : e.target[6].value ,
+            "btn3": (e.target[3.5*2].value === "") ? kyrgyzFiles.btn3 : e.target[7].value
+        })
+            .then(res => console.log(res.data))
+            .catch((err) => alert(err))
+    }
+
+    const onSubmitImg = (e) => {
+        e.preventDefault()
+        axios.patch("http://localhost:5555/images", {
+            "src1": (e.target[0].value === "") ? selectImage.src1 : e.target[0].files[0].name,
+            "src2": (e.target[1].value === "") ? selectImage.src2 : e.target[1].files[0].name,
+            "src3": (e.target[2].value === "") ? selectImage.src3 : e.target[2].files[0].name
+        })
+            .then((res) => console.log(res.data))
+            .catch((err) => console.error(err))
+    }
+
+    const onSubmitDirector = (e) => {
+        e.preventDefault()
+        axios.patch("http://localhost:5555/director", {
+            "name": (e.target[0].value === "") ? director.name : e.target[0].value,
+            "email": (e.target[1].value === "") ? director.name : e.target[1].value,
+            "number1": (e.target[2].value === "") ? director.name : e.target[2].value,
+            "number2": (e.target[3].value === "") ? director.name : e.target[3].value,
+            "img": (e.target[4].value === "") ? director.img : e.target[4].files[0].name
+        })
+            .then((res) => console.log(res.data))
+            .catch((err) => console.error(err))
+    }
+
     return (
         <section className="admin">
             <div className="container">
@@ -250,12 +328,10 @@ const Admin = () => {
                         <input placeholder="Директор" type="text"/>
                         <input placeholder="Кошумча байланыш" type="text"/>
                         <input placeholder="Кирүү" type="text"/>
-                        <input onChange={handleChange} accept="image/*" type="file"/>
                         <button className="admin__btn">
                             Алмаштыруу
                         </button>
                     </form>
-                    <img src={selectImage} alt=""/>
                     <h2 className="admin__title">
                         Кыргызча баш
                     </h2>
@@ -388,7 +464,65 @@ const Admin = () => {
                             Алмаштыруу
                         </button>
                     </form>
+                    <h2 className="admin__title">
+                        Орусча файлдар
+                    </h2>
+                    <form onSubmit={onSubmitFilesRussian} className="admin__form">
+                        <input placeholder="Бул презентацияны көрүү аркылуу биз жөнүндө көбүрөөк биле аласыз (кыргыз тилинде)." type="text"/>
+                        <input placeholder="Бул таблицаны карап, биз жөнүндө көбүрөөк биле аласыз (кыргыз тилинде)." type="text"/>
+                        <input placeholder="Биздин кызматкерлер" type="text"/>
+                        <input placeholder="Департаменттин Жобосу" type="text"/>
+                        <input placeholder="Органика Мыйзамы" type="text"/>
+                        <input placeholder="ТАБЛИЦАНЫ ЖҮКТӨП АЛУУ" type="text"/>
+                        <input placeholder="ДОКУМЕНТТИ ЖҮКТӨП АЛУУ" type="text"/>
+                        <input placeholder="ПРЕЗЕНТАЦИЯНЫ ЖҮКТӨП АЛУУ" type="text"/>
+                        <button className="admin__btn">
+                            Алмаштыруу
+                        </button>
+                    </form>
+                    <h2 className="admin__title">
+                        Кыргызча файлдар
+                    </h2>
+                    <form onSubmit={onSubmitFilesKyrgyz} className="admin__form">
+                        <input placeholder="Бул презентацияны көрүү аркылуу биз жөнүндө көбүрөөк биле аласыз (кыргыз тилинде)." type="text"/>
+                        <input placeholder="Бул таблицаны карап, биз жөнүндө көбүрөөк биле аласыз (кыргыз тилинде)." type="text"/>
+                        <input placeholder="Биздин кызматкерлер" type="text"/>
+                        <input placeholder="Департаменттин Жобосу" type="text"/>
+                        <input placeholder="Органика Мыйзамы" type="text"/>
+                        <input placeholder="ТАБЛИЦАНЫ ЖҮКТӨП АЛУУ" type="text"/>
+                        <input placeholder="ДОКУМЕНТТИ ЖҮКТӨП АЛУУ" type="text"/>
+                        <input placeholder="ПРЕЗЕНТАЦИЯНЫ ЖҮКТӨП АЛУУ" type="text"/>
+                        <button className="admin__btn">
+                            Алмаштыруу
+                        </button>
+                    </form>
                 </div>
+                <div className="admin__images">
+                    <h2 className="admin__title">
+                        Сүрөттөр
+                    </h2>
+                    <form className="admin__form" onSubmit={onSubmitImg}>
+                        <input accept="image/*" type="file"/>
+                        <input accept="image/*" type="file"/>
+                        <input accept="image/*" type="file"/>
+                        <button className="admin__btn">
+                            алмаштыруу
+                        </button>
+                    </form>
+                </div>
+                <h2 className="admin__title">
+                    Директор
+                </h2>
+                <form onSubmit={onSubmitDirector} className="admin__form">
+                    <input placeholder="аты-жөнү" type="text"/>
+                    <input placeholder="электрондук почтасы" type="text"/>
+                    <input placeholder="номери" type="number"/>
+                    <input placeholder="номери-2" type="number"/>
+                    <input accept="image/*" type="file"/>
+                    <button className="admin__btn">
+                        Алмаштыруу
+                    </button>
+                </form>
             </div>
         </section>
     );

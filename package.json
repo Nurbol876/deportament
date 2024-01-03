@@ -30,7 +30,7 @@
     "russian": "json-server --watch ./public/Locales/RU/translation.json --port 8888",
     "kyrgyz": "json-server --watch ./public/Locales/KG/translation.json --port 4444",
     "server": "json-server --watch db.json --port 5555",
-    "dev": "concurrently \"yarn start\" \"yarn kyrgyz\" \"yarn russian\"",
+    "dev": "concurrently \"yarn start\" \"yarn kyrgyz\" \"yarn russian\" \"yarn server\"",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

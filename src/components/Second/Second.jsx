@@ -1,12 +1,16 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import compost from './assets/compost.svg'
 import list from './assets/list.svg'
-import plant from './assets/plant.jpg'
 import {useTranslation} from "react-i18next";
+import {CustomContext} from "../../Context";
 
 const Second = () => {
 
     const {t} = useTranslation()
+
+    const {img} = useContext(CustomContext)
+
+
     return (
         <section className="second">
             <img src={list} alt="list" className="second__list"/>
@@ -15,8 +19,11 @@ const Second = () => {
                     <div className="container">
                         <div className="second__content">
                             <h2 dangerouslySetInnerHTML={{__html: t("Second.title")}} className="title wow fadeInLeftBig"/>
-                            <img src={plant} alt="plant"
-                                 className="second__img wow fadeInRightBig"/>
+                            {
+                                (typeof img.src3 === "undefined") ? "" :
+                                    <img src={require(`./assets/${img.src3}`)} className="second__img" alt="second__img"/>
+
+                            }
                         </div>
                     </div>
         </section>

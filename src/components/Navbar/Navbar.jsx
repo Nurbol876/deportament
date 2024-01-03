@@ -1,17 +1,17 @@
 import React, {useState, useContext} from 'react';
 import {useTranslation} from "react-i18next";
-import logo from './assets/logo.jpg';
 import Contacts from "./Contacts";
 import {Link} from "react-router-dom";
 import {CustomContext} from "../../Context";
 
 const Navbar = () => {
 
-    const{ images } = useContext(CustomContext)
-
     const [contact, setContact] = useState(false)
 
-    const {t} = useTranslation();
+    const {img} = useContext(CustomContext)
+
+     const {t} = useTranslation();
+
 
     return (
         <nav className='navbar'>
@@ -35,7 +35,11 @@ const Navbar = () => {
             </ul>
             <div className="navbar__logo">
                 <div>
-                    <img src={t("images.logo")} alt=""/>
+                    {
+                        (typeof img.src1 === "undefined") ? "" :
+                            <img src={require(`./assets/${img.src1}`)} className="logo__img" alt="logo"/>
+
+                    }
                 </div>
             </div>
         </nav>

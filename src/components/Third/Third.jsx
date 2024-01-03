@@ -20,7 +20,7 @@ const Third = () => {
                     </button>
                     <div className="third__item">
                         <button className="btn">
-                            <a target="_blank" href="http://cbd.minjust.gov.kg/act/view/ru-ru/112544?cl=ru-ru" className="third__link">{t("Home.Third.btn3")}</a>
+                            <a target="_blank" href="http://cbd.minjust.gov.kg/act/view/ru-ru/112544?cl=ru-ru" className="third__link">{t("Third.btn3")}</a>
                         </button>
                     </div>
                 </div>
