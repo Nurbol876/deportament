@@ -17,13 +17,24 @@ export const Context = (props) => {
     }, [])
 
     const reqisterUser = (data) => {
-        axios.post('http://localhost:5555/users', { ...data })
-            .then((res) => {
-                localStorage.setItem('user', JSON.stringify(res.data))
-                setUser(res.data)
-                navigate('/')
+
+        const { email } = data
+
+        axios.get(`http://localhost:5555/users?email=${email}`)
+            .then(({data}) => {
+                if(data.length > 0) {
+                    alert("Простите но такой аккаунт существует")
+                } else {
+                    axios.post('http://localhost:5555/users', { ...data })
+                        .then((res) => {
+                            localStorage.setItem('user', JSON.stringify(res.data))
+                            setUser(res.data)
+                            navigate('/')
+                        })
+                        .catch((error) => alert('Простите но такой аккаунт уже существует или сервер не работает'));
+                }
             })
-            .catch((error) => alert('Простите но такой аккаунт уже существует или сервер не работает'));
+            .catch((err) => alert(err))
     };
     const [gmailLogin, setGmailLogin] = useState('')
     const [passwordLogin, setPasswordLogin] = useState(0)
@@ -34,6 +45,7 @@ export const Context = (props) => {
         axios.get('http://localhost:5555/users')
             .then(({ data }) => {
                 const filteredUsers = data.filter(i => i.email === gmailLogin);
+                console.log(filteredUsers)
                 if (filteredUsers.length === 0) {
                     alert('Не правильный адрес почты');
                 } else {

@@ -26,7 +26,7 @@ const Header = () => {
             <div className="container">
                 <nav className="header__nav">
                     <h2 style={{position: "absolute", left: "50px", top: "20px"}} className="header__link">
-                        {user.name}
+                        {user && user.name}
                     </h2>
                     <div className="header__logo">
                         <Link to='/' className="logo">
@@ -71,13 +71,13 @@ const Header = () => {
                             </NavLink>
                         </li>
                         {
-                            user.name === "Admin" && user.email === "nurbolsagynbekov876@gmail.com" && user.password === "KGdeportament" ? (
+                            user && user.name === "Admin" && user.email === "nurbolsagynbekov876@gmail.com" && user.password === "KGdeportament" && (
                                 <li className="header__item">
                                     <NavLink to='/admin' className="header__link">
                                         admin
                                     </NavLink>
                                 </li>
-                            ) : ""
+                            )
                         }
                         <li className="header__item">
                             {

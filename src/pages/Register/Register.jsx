@@ -20,10 +20,10 @@ const Register = () => {
             <div className='form'>
                 <h2 className='title'>{t('Reg.title')}</h2>
                 <form onSubmit={handleSubmit(reqisterUser)} action='#'>
-                    <input {...register('email')} type='text' placeholder='Enter your email' />
-                    <input {...register('name')} type='text' placeholder='Enter your name' />
-                    <input {...register('password')} type='password' placeholder='Create a password' />
-                    <input type='password' placeholder='Confirm your password' />
+                    <input required {...register('email')} type='text' placeholder='Enter your email' />
+                    <input required {...register('name')} type='text' placeholder='Enter your name' />
+                    <input required {...register('password')} type='password' placeholder='Create a password' />
+                    <input required type='password' placeholder='Confirm your password' />
                     <button type='submit' className='button'>
                         Signup
                     </button>

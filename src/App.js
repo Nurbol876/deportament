@@ -24,10 +24,10 @@ const App = () => {
             <Navbar/>
             <Header/>
             <Routes>
-                <Route path='/' element={<Home/>}/>
-                {
-                    user.name === "Admin" && user.email === "nurbolsagynbekov876@gmail.com" && user.password === "KGdeportament" ? (<Route path='/admin' element={<Admin/>}/>) : ""
-                }
+                <Route path='/' element={<Home />} />
+                {user && user.name === "Admin" && user.email === "nurbolsagynbekov876@gmail.com" && user.password === "KGdeportament" && (
+                    <Route path='/admin' element={<Admin />} />
+                )}
                 <Route path='/map' element={<Fifth/>}/>
                 <Route path='/world' element={<Pop/>}/>
                 <Route path='/makers' element={<Pou/>}/>

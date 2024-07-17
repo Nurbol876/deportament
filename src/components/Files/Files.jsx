@@ -47,7 +47,7 @@ const Files = () => {
         };
 
         axios.patch("http://localhost:4444/Files", data)
-            .then(() => alert("good removing"))
+            .then(() => alert("Кошулду"))
             .catch((err) => alert("error"))
 
         const newCard = {
@@ -84,12 +84,15 @@ const Files = () => {
                                         {t(`Files.${i.subtitle}`)}
                                     </h4>
                                     <button className="btn">
-                                        <a href={require(`./dowload/${i.file}`)} download="" className="fourth__link">
-                                            {t(`Files.${i.btn}`)}
-                                        </a>
+                                        {i.file && (
+                                            <a href={require(`./dowload/${i.file}`)} download="" className="fourth__link">
+                                                {t(`Files.${i.btn}`)}
+                                            </a>
+                                        )}
                                     </button>
+
                                     {
-                                        user.name === "Admin" && user.email === "nurbolsagynbekov876@gmail.com" && user.password === "KGdeportament" ? (
+                                        user && user.name === "Admin" && user.email === "nurbolsagynbekov876@gmail.com" && user.password === "KGdeportament" ? (
                                             <button style={{marginTop: "20px"}} onClick={e => postDelete(i.id, e)} className="btn">
                                                 <p className="fourth__link">
                                                     өчүрүү
@@ -103,7 +106,7 @@ const Files = () => {
                     })
                 }
                 {
-                    user.name === "Admin" && user.email === "nurbolsagynbekov876@gmail.com" && user.password === "KGdeportament" ? (
+                    user && user.name === "Admin" && user.email === "nurbolsagynbekov876@gmail.com" && user.password === "KGdeportament" && (
                         <SwiperSlide>
                             <form onSubmit={addCard} className="fourth__cart">
                                 <input accept="image/*" type="file" className="fourth__input"/>
@@ -116,7 +119,7 @@ const Files = () => {
                                 </button>
                             </form>
                         </SwiperSlide>
-                    ) : ""
+                    )
                 }
 
             </Swiper>

@@ -516,8 +516,8 @@ const Admin = () => {
                 <form onSubmit={onSubmitDirector} className="admin__form">
                     <input placeholder="аты-жөнү" type="text"/>
                     <input placeholder="электрондук почтасы" type="text"/>
-                    <input placeholder="номери" type="number"/>
-                    <input placeholder="номери-2" type="number"/>
+                    <input placeholder="номери" type="text"/>
+                    <input placeholder="номери-2" type="text"/>
                     <input accept="image/*" type="file"/>
                     <button className="admin__btn">
                         Алмаштыруу

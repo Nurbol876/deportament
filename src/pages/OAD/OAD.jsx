@@ -1,24 +1,27 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-// import 'swiper/swiper-bundle.min.css';
 import { Pagination, Autoplay, Navigation } from 'swiper/modules';
 import {useTranslation} from "react-i18next";
+import axios from "axios";
 
 const Oad = () => {
+    const[data, setData] = useState([])
+
+    useEffect(() => {
+        axios("http://localhost:5555/Data2023")
+            .then(({data}) => {
+                setData(data.Koika)
+            })
+            .catch((err) => console.log(err))
+    }, [])
 
     const {t} = useTranslation()
 
     return (
         <section className="OAD">
-            <label>
-                <select className="year__select">
-                    <option value="2022" className="year__option">2022</option>
-                </select>                    {/*<option value="2023" class="year__option">2023</option>*/}
-
-            </label>
             <h1 className="title">{t("World.title")}</h1>
             <Swiper
                 loop={true}
@@ -826,272 +829,72 @@ const Oad = () => {
             </Swiper>
             <h2 className="title">{t("World.title2")}</h2>
             <Swiper
-                    loop={true}
-                    pagination={{
-                                  type: 'fraction'
-                              }}
-                    navigation={true}
-                    autoplay={{
-                        delay: 3000
-                    }}
-                    modules={[Pagination, Navigation, Autoplay]}
-                    className="mySwiper">
-                <SwiperSlide>
-                    <div className="OAD__cart">
-                        <div className="OAD__info">
-                            <p className="OAD__desk">№1</p>
-                            <h2 className="OAD__title">Teplokluychenka орг. аймагы </h2>
-                        </div>
-                        <table className="OAD__table">
-                            <tr className="OAD__tr">
-                                <td className="OAD__td" colSpan="2">Площадь земель га</td>
-                                <td className="OAD__td">4812</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td" rowSpan="10">растениеводство</td>
-                                <td className="OAD__td">Картошка</td>
-                                <td className="OAD__td">26909</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td">Огурец</td>
-                                <td className="OAD__td">250</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td">Чеснок</td>
-                                <td className="OAD__td">129</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td">Помидор</td>
-                                <td className="OAD__td">250</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td">Кукуруза</td>
-                                <td className="OAD__td">500</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td">Пшеница</td>
-                                <td className="OAD__td">5430</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td">Ячмень</td>
-                                <td className="OAD__td">1353</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td">Плодовый сад</td>
-                                <td className="OAD__td">418</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td">Овощной</td>
-                                <td className="OAD__td">321,5</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td">Яблоко</td>
-                                <td className="OAD__td">150</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td" rowSpan="5">Мал чарбасы</td>
-                                <td className="OAD__td">Як</td>
-                                <td className="OAD__td">2</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td">Овцы</td>
-                                <td className="OAD__td">3</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td">Лошадь</td>
-                                <td className="OAD__td">5</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td">Птицы</td>
-                                <td className="OAD__td">1</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td">Яйца</td>
-                                <td className="OAD__td">100000</td>
-                            </tr>
-                        </table>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="OAD__cart">
-                        <div className="OAD__info">
-                            <p className="OAD__desk">№2</p>
-                            <h2 className="OAD__title">Маман орг. аймагы</h2>
-                        </div>
-                        <table className="OAD__table">
-                            <tr className="OAD__tr">
-                                <td className="OAD__td" colSpan="2">Площадь земель га</td>
-                                <td className="OAD__td">4233</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td" rowSpan="4">растениеводство</td>
-                                <td className="OAD__td">Картошка</td>
-                                <td className="OAD__td">2880</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td">Чеснок</td>
-                                <td className="OAD__td">500</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td">Пшеница</td>
-                                <td className="OAD__td">449</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td">Ячмень</td>
-                                <td className="OAD__td">386</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td" rowSpan="3">Мал чарбасы</td>
-                                <td className="OAD__td">Овцы</td>
-                                <td className="OAD__td">1</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td">Лошадь</td>
-                                <td className="OAD__td">1</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td">Яйца</td>
-                                <td className="OAD__td">20000</td>
-                            </tr>
-                        </table>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="OAD__cart">
-                        <div className="OAD__info">
-                            <p className="OAD__desk">№3</p>
-                            <h2 className="OAD__title">Тосор орг. аймагы</h2>
-                        </div>
-                        <table className="OAD__table">
-                            <tr className="OAD__tr">
-                                <td className="OAD__td" colSpan="2">Площадь земель га</td>
-                                <td className="OAD__td">1602</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td" rowSpan="7">растениеводство</td>
-                                <td className="OAD__td">Картошка</td>
-                                <td className="OAD__td">2896</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td">Чеснок</td>
-                                <td className="OAD__td">54,6</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td">Пшеница</td>
-                                <td className="OAD__td">543,2</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td">Ячмень</td>
-                                <td className="OAD__td">740</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td">Абрикос</td>
-                                <td className="OAD__td">2000</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td">Плодовый сад</td>
-                                <td className="OAD__td">2929</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td">Овощной</td>
-                                <td className="OAD__td">272</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td" rowSpan="3">Мал чарбасы</td>
-                                <td className="OAD__td">Як</td>
-                                <td className="OAD__td">1</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td">Овцы</td>
-                                <td className="OAD__td">2</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td">Яйца</td>
-                                <td className="OAD__td">35000</td>
-                            </tr>
-                        </table>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="OAD__cart">
-                        <div className="OAD__info">
-                            <p className="OAD__desk"></p>
-                            <h2 className="OAD__title">Итого:</h2>
-                        </div>
-                        <table className="OAD__table">
-                            <tr className="OAD__tr">
-                                <td className="OAD__td" colSpan="2">Площадь земель га</td>
-                                <td className="OAD__td">10647</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td" rowSpan="11">растениеводство</td>
-                                <td className="OAD__td">Картошка</td>
-                                <td className="OAD__td">32685</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td">Огурец</td>
-                                <td className="OAD__td">250</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td">Чеснок</td>
-                                <td className="OAD__td">683,60</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td">Помидор</td>
-                                <td className="OAD__td">250</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td">Кукуруза</td>
-                                <td className="OAD__td">500</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td">Пшеница</td>
-                                <td className="OAD__td">6522</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td">Ячмень</td>
-                                <td className="OAD__td">2479</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td">Абрикос</td>
-                                <td className="OAD__td">2000</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td">Плодовый сад</td>
-                                <td className="OAD__td">3347</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td">Овощной</td>
-                                <td className="OAD__td">593,5</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td">Яблоко</td>
-                                <td className="OAD__td">226</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td" rowSpan="5">Мал чарбасы</td>
-                                <td className="OAD__td">Як</td>
-                                <td className="OAD__td">3</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td">Овцы</td>
-                                <td className="OAD__td">6</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td">Лошадь</td>
-                                <td className="OAD__td">6</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td">Птицы</td>
-                                <td className="OAD__td">1</td>
-                            </tr>
-                            <tr className="OAD__tr">
-                                <td className="OAD__td">Яйца</td>
-                                <td className="OAD__td">155000</td>
-                            </tr>
-                        </table>
-                    </div>
-                </SwiperSlide>
+                pagination={{
+                    type: 'fraction'
+                }}
+                navigation={true}
+                autoplay={{
+                    delay: 3000
+                }}
+                className="mySwiper twentythree"
+                modules={[Pagination, Navigation, Autoplay]}
+            >
+                {
+                    data.map((i) => (
+                        <SwiperSlide>
+                            <div className="OAD__cart">
+                                <div className="OAD__info">
+                                    <p className="OAD__desk">{i.number}</p>
+                                    <h2 className="OAD__title">{i.name} </h2>
+                                </div>
+                                <table className="OAD__table">
+                                    <tr className="OAD__tr">
+                                        <td className="OAD__td" colSpan="2">Площадь  га</td>
+                                        <td className="OAD__td">{i.area}</td>
+                                    </tr>
+                                    <tr className="OAD__tr">
+                                        <td className="OAD__td" colSpan="2">Район жана область</td>
+                                        <td className="OAD__td">{i.place}</td>
+                                    </tr>
+                                    <tr className="OAD__tr">
+                                        <td className="OAD__td" colSpan="2">Телефон</td>
+                                        <td className="OAD__td">{i.phone}</td>
+                                    </tr>
+                                    <tr className="OAD__tr">
+                                        <td className="OAD__td" rowSpan={i.Plants[0].length+1}>растениеводство</td>
+                                    </tr>
+                                    {
+                                        i.Plants[0].map((a, index) => (
+                                            <tr className="OAD__td" key={index}>
+                                                <td className="OAD__td">
+                                                    {a}
+                                                </td>
+                                                <td className="OAD__td">
+                                                    {i.Plants[1][index]}
+                                                </td>
+                                            </tr>
+                                        ))
+                                    }
+                                    <tr className="OAD__tr">
+                                        <td className="OAD__td" rowSpan={i.Meat[0].length+1}>Мал чарбасы</td>
+                                    </tr>
+                                    {
+                                        i.Meat[0].map((a, index) => (
+                                            <tr className="OAD__td" key={index}>
+                                                <td className="OAD__td">
+                                                    {a}
+                                                </td>
+                                                <td className="OAD__td">
+                                                    {i.Meat[1][index]}
+                                                </td>
+                                            </tr>
+                                        ))
+                                    }
+                                </table>
+                            </div>
+                        </SwiperSlide>
+                    ))
+                }
             </Swiper>
         </section>
 );

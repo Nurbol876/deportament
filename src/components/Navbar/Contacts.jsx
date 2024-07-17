@@ -9,7 +9,7 @@ const Contacts = ({active}) => {
             <ul className="header__aside-list">
                 <li className="header__contact">
                     <a href="tel:+996312661240" className="header__aside-link">
-                        +996(312)-66-12-40
+                        +996(708)-32-08-20
                     </a>
                     <p className="header__desk">
                         {t("Header.desk1")}
@@ -17,7 +17,7 @@ const Contacts = ({active}) => {
                 </li>
                 <li className="header__contact">
                     <a href="tel:+996312661229" className="header__aside-link">
-                        +996(312)-66-12-29
+                        +996(772)-37-73-86
                     </a>
                     <p className="header__desk">
                         {t("Header.desk2")}
