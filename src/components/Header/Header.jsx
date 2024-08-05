@@ -1,19 +1,20 @@
 import React, {useContext, useState} from 'react';
-import {Link, NavLink, Route, Routes, useNavigate} from "react-router-dom";
+import {Link, NavLink, useNavigate} from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import logo from './assets/logo.jpg';
 import x from './assets/x.svg'
 import menu from './assets/menu.svg'
+import arrow from "./assets/arrow.svg"
 import {CustomContext} from "../../Context";
 import Admin from "../../pages/AdminOfDep/Admin";
 
 const Header = () => {
 
-    const {user, LogOutUser} = useContext(CustomContext)
+    const {user, LogOutUser, setStart} = useContext(CustomContext)
 
     const {t, i18n} = useTranslation();
 
     const [clas, setClas] = useState(false)
+    const [list, setList] = useState(false)
 
     const navigate = useNavigate()
 
@@ -30,7 +31,6 @@ const Header = () => {
                     </h2>
                     <div className="header__logo">
                         <Link to='/' className="logo">
-                            {/*<img src={logo} alt="logo" className="logo__img"/>*/}
                             <h2 dangerouslySetInnerHTML={{__html: t("Header.title")}} className="logo__title"/>
                         </Link>
                     </div>
@@ -56,9 +56,49 @@ const Header = () => {
                             <NavLink to='/depor' className="header__link">{t("Header.link1")}</NavLink>
                         </li>
                         <li className="header__item">
-                            <NavLink to='/organic' className="header__link">
-                                {t("Header.link2")}
-                            </NavLink>
+                            <div className="header__thing">
+                                <NavLink to='/organic' className="header__link">
+                                    {t("Header.link2")}
+                                </NavLink>
+                                <img src={arrow} alt="triangle" onClick={() => setList(!list)} className={`header__triangle ${list ? 'header__triangle-active': ''}`}/>
+                            </div>
+                            <ul className={`header__areas ${list ?'header__areas-active': ''}`}>
+                                <li>
+                                    <NavLink onClick={setStart(1)} to="/organic/Chuy" className="header__link header__link-mini">
+                                        Чуй
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink onClick={setStart(1)} to="/organic/Naryn" className="header__link header__link-mini">
+                                        Нарын
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink onClick={setStart(1)} to="/organic/IssykKul" className="header__link header__link-mini">
+                                        Ысык-Көл
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink onClick={setStart(1)} to="/organic/Talas" className="header__link header__link-mini">
+                                        Талас
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink onClick={setStart(1)} to="/organic/Batken" className="header__link header__link-mini">
+                                        Баткен
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink onClick={setStart(1)} to="/organic/DjalalAbad" className="header__link header__link-mini">
+                                        Джалал-Абад
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink onClick={setStart(1)} to="/organic/Osh" className="header__link header__link-mini">
+                                        Ош
+                                    </NavLink>
+                                </li>
+                            </ul>
                         </li>
                         <li className="header__item">
                             <NavLink to='/makers' className="header__link">

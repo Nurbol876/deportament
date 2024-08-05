@@ -5,15 +5,18 @@ import { Link } from 'react-router-dom';
 
 const Login = () => {
     const { t } = useTranslation();
-    const { setGmailLogin, setPasswordLogin, logIn } = useContext(CustomContext);
+    const {  setNameLogin, setPasswordLogin, logIn } = useContext(CustomContext);
 
+    const handleLoginChange = (e) => {
+        const name = e.target.value;
+        setNameLogin(name);
+    }
+    const handlePasswordChange = (e) => {
+         const password = e.target.value;
+         setPasswordLogin(password);
+    }
     const handleLoginFormSubmit = (e) => {
         e.preventDefault();
-        const email = e.target[0].value;
-        const password = e.target[1].value;
-
-        setGmailLogin(email);
-        setPasswordLogin(password);
         logIn();
     };
 
@@ -22,9 +25,8 @@ const Login = () => {
             <div className='form'>
                 <h2 className='title'>{t('Login.title')}</h2>
                 <form onSubmit={handleLoginFormSubmit} action='#'>
-                    <input type='email' placeholder='Enter your email' />
-                    <input type='password' placeholder='Enter your password' />
-                    <Link to='/forgot'>{t('Login.desk')}</Link>
+                    <input onChange={handleLoginChange} type='text' placeholder='Логин' />
+                    <input onChange={handlePasswordChange} type='password' placeholder='Пароль' />
                     <button type='submit' className='button'>
                         Login
                     </button>

@@ -6,6 +6,8 @@ export const CustomContext = createContext()
 
 export const Context = (props) => {
 
+    const[start, setStart] = useState(true)
+
     const navigate = useNavigate()
 
     const [user, setUser] = useState({
@@ -36,7 +38,7 @@ export const Context = (props) => {
             })
             .catch((err) => alert(err))
     };
-    const [gmailLogin, setGmailLogin] = useState('')
+    const [nameLogin, setNameLogin] = useState('')
     const [passwordLogin, setPasswordLogin] = useState(0)
 
 
@@ -44,10 +46,9 @@ export const Context = (props) => {
     const logIn = () => {
         axios.get('http://localhost:5555/users')
             .then(({ data }) => {
-                const filteredUsers = data.filter(i => i.email === gmailLogin);
-                console.log(filteredUsers)
+                const filteredUsers = data.filter(i => i.name === nameLogin);
                 if (filteredUsers.length === 0) {
-                    alert('Не правильный адрес почты');
+                    alert('Не правильное имя');
                 } else {
                     const loggedInUser = filteredUsers[0]; // Предполагаем, что вы хотите получить первого найденного пользователя
                    if(loggedInUser.password === passwordLogin) {
@@ -83,9 +84,11 @@ export const Context = (props) => {
     const value = {
         user,
         setUser,
-        setGmailLogin,
+        setNameLogin,
         setPasswordLogin,
         img,
+        start,
+        setStart,
         reqisterUser,
         LogOutUser,
         logIn

@@ -272,7 +272,10 @@
     justify-content: center;
     margin: 30px 0 0;
   }
-
+  &__products{
+    display: flex;
+    flex-direction: row;
+  }
   &__label {
     outline: none;
     border: 1px solid black;

@@ -68,7 +68,6 @@
     justify-content: center;
     align-items: flex-end;
   }
-
   &__menu{
     position: absolute;
       top: 25px;
@@ -97,6 +96,9 @@
     }
     .header__link{
       color: black;
+      &-mini{
+        font-size: 20px;
+      }
   }
     &-x{
       position: absolute;
@@ -149,6 +151,28 @@
       background: transparent;
       color: #00ff0a;
     }
+  }
+  &__areas{
+    transform: translateY(-100%);
+    text-align: right;
+    display: none;
+    &-active{
+      display: block;
+      transform: translateY(0);
+    }
+  }
+  &__triangle{
+    width: 30px;
+    height: 30px;
+    transform: rotate(180deg);
+    &-active{
+      transform: rotate(0);
+    }
+  }
+  &__thing{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 

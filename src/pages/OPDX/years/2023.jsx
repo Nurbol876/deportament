@@ -103,7 +103,7 @@ const Year2023 = ({ year }) => {
                                                                 {a}
                                                             </td>
                                                             <td className="opdx__td" colSpan="3">
-                                                                {i.products[4][index]}
+                                                                {i.products[3][index]}
                                                             </td>
                                                         </tr>
                                                     ))}
@@ -176,7 +176,7 @@ const Year2023 = ({ year }) => {
                                                         {a}
                                                     </td>
                                                     <td className="opdx__td" colSpan="3">
-                                                        {i.products[4][index]}
+                                                        {i.products[3][index]}
                                                     </td>
                                                 </tr>
                                             ))}
@@ -249,7 +249,7 @@ const Year2023 = ({ year }) => {
                                                         {a}
                                                     </td>
                                                     <td className="opdx__td" colSpan="3">
-                                                        {i.products[4][index]}
+                                                        {i.products[3][index]}
                                                     </td>
                                                 </tr>
                                             ))}
@@ -322,7 +322,7 @@ const Year2023 = ({ year }) => {
                                                         {a}
                                                     </td>
                                                     <td className="opdx__td" colSpan="3">
-                                                        {i.products[4][index]}
+                                                        {i.products[3][index]}
                                                     </td>
                                                 </tr>
                                             ))}
@@ -395,7 +395,7 @@ const Year2023 = ({ year }) => {
                                                         {a}
                                                     </td>
                                                     <td className="opdx__td" colSpan="3">
-                                                        {i.products[4][index]}
+                                                        {i.products[3][index]}
                                                     </td>
                                                 </tr>
                                             ))}
@@ -468,7 +468,7 @@ const Year2023 = ({ year }) => {
                                                         {a}
                                                     </td>
                                                     <td className="opdx__td" colSpan="3">
-                                                        {i.products[4][index]}
+                                                        {i.products[3][index]}
                                                     </td>
                                                 </tr>
                                             ))}
