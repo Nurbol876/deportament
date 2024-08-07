@@ -37,6 +37,304 @@ const Year2023 = ({ year }) => {
 
        return (
         <>
+            <table className="pou__table">
+                <tr className="pou__tr">
+                    <td colSpan="9" className="pou__td pou__td-title">
+                        Информация по пилотным хозяйствам ДОСХ 2023г.
+                    </td>
+                </tr>
+                <tr className="pou__tr">
+                    <td className="pou__td">№ свидет-ва</td>
+                    <td className="pou__td">Ф.И.О фермера и районы</td>
+                    <td className="pou__td">Наименование хозяйства</td>
+                    <td className="pou__td">Номер телефона</td>
+                    <td className="pou__td">Число человек</td>
+                    <td className="pou__td">Площадь земли ГА</td>
+                    <td className="pou__td">Экспорт</td>
+                    <td className="pou__td">Продукция</td>
+                    <td className="pou__td">Производство</td>
+                </tr>
+                <tr className="pou__tr">
+                    <td colSpan="9" className="pou__td">
+                        Баткен область
+                    </td>
+                </tr>
+                {batken.map((i) => (
+                    <React.Fragment key={i.number}>
+                        <tr className="pou__tr">
+                            <td className="pou__td">{i.number}</td>
+                            <td className="pou__td">{i.name}</td>
+                            <td className="pou__td">{i.place}</td>
+                            <td className="pou__td">{i.phone ? `+996${i.phone}` : t("Opdx.answer")}</td>
+                            <td className="pou__td">{i.people ? i.people : t("Opdx.answer")}</td>
+                            <td className="pou__td">{i.products[0]}</td>
+                            <td className="pou__td">{i.products[1]}</td>
+                            <td className="pou__td">
+                                <table className="nested-table">
+                                    <tbody>
+                                    {i.products[2].map((a, index) => (
+                                        <tr key={index}>
+                                            <td colSpan={1} className="opdx__products pou__td">{a}</td>
+                                        </tr>
+                                    ))}
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td className="pou__td">
+                                <table className="nested-table">
+                                    <tbody>
+                                    {i.products[3].map((a, index) => (
+                                        <tr key={index}>
+                                            <td className=" opdx__products pou__td">{a}</td>
+                                        </tr>
+                                    ))}
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </React.Fragment>
+                ))}
+                <tr className="pou__tr">
+                    <td colSpan="9" className="pou__td">
+                        Ысык-Көл область
+                    </td>
+                </tr>
+                {issykKul.map((i) => (
+                    <React.Fragment key={i.number}>
+                        <tr className="pou__tr">
+                            <td className="pou__td">{i.number}</td>
+                            <td className="pou__td">{i.name}</td>
+                            <td className="pou__td">{i.place}</td>
+                            <td className="pou__td">{i.phone ? `+996${i.phone}` : t("Opdx.answer")}</td>
+                            <td className="pou__td">{i.people ? i.people : t("Opdx.answer")}</td>
+                            <td className="pou__td">{i.products[0]}</td>
+                            <td className="pou__td">{i.products[1]}</td>
+                            <td className="pou__td">
+                                <table className="nested-table">
+                                    <tbody>
+                                    {i.products[2].map((a, index) => (
+                                        <tr key={index}>
+                                            <td colSpan={1} className="opdx__products pou__td">{a}</td>
+                                        </tr>
+                                    ))}
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td className="pou__td">
+                                <table className="nested-table">
+                                    <tbody>
+                                    {i.products[3].map((a, index) => (
+                                        <tr key={index}>
+                                            <td className=" opdx__products pou__td">{a}</td>
+                                        </tr>
+                                    ))}
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </React.Fragment>
+                ))}
+                <tr className="pou__tr">
+                    <td colSpan="9" className="pou__td">
+                        Джалал-Абад область
+                    </td>
+                </tr>
+                {djalal.map((i) => (
+                    <React.Fragment key={i.number}>
+                        <tr className="pou__tr">
+                            <td className="pou__td">{i.number}</td>
+                            <td className="pou__td">{i.name}</td>
+                            <td className="pou__td">{i.place}</td>
+                            <td className="pou__td">{i.phone ? `+996${i.phone}` : t("Opdx.answer")}</td>
+                            <td className="pou__td">{i.people ? i.people : t("Opdx.answer")}</td>
+                            <td className="pou__td">{i.products[0]}</td>
+                            <td className="pou__td">{i.products[1]}</td>
+                            <td className="pou__td">
+                                <table className="nested-table">
+                                    <tbody>
+                                    {i.products[2].map((a, index) => (
+                                        <tr key={index}>
+                                            <td colSpan={1} className="opdx__products pou__td">{a}</td>
+                                        </tr>
+                                    ))}
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td className="pou__td">
+                                <table className="nested-table">
+                                    <tbody>
+                                    {i.products[3].map((a, index) => (
+                                        <tr key={index}>
+                                            <td className=" opdx__products pou__td">{a}</td>
+                                        </tr>
+                                    ))}
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </React.Fragment>
+                ))}
+                <tr className="pou__tr">
+                    <td colSpan="9" className="pou__td">
+                        Ош область
+                    </td>
+                </tr>
+                {osh.map((i) => (
+                    <React.Fragment key={i.number}>
+                        <tr className="pou__tr">
+                            <td className="pou__td">{i.number}</td>
+                            <td className="pou__td">{i.name}</td>
+                            <td className="pou__td">{i.place}</td>
+                            <td className="pou__td">{i.phone ? `+996${i.phone}` : t("Opdx.answer")}</td>
+                            <td className="pou__td">{i.people ? i.people : t("Opdx.answer")}</td>
+                            <td className="pou__td">{i.products[0]}</td>
+                            <td className="pou__td">{i.products[1]}</td>
+                            <td className="pou__td">
+                                <table className="nested-table">
+                                    <tbody>
+                                    {i.products[2].map((a, index) => (
+                                        <tr key={index}>
+                                            <td colSpan={1} className="opdx__products pou__td">{a}</td>
+                                        </tr>
+                                    ))}
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td className="pou__td">
+                                <table className="nested-table">
+                                    <tbody>
+                                    {i.products[3].map((a, index) => (
+                                        <tr key={index}>
+                                            <td className=" opdx__products pou__td">{a}</td>
+                                        </tr>
+                                    ))}
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </React.Fragment>
+                ))}
+                <tr className="pou__tr">
+                    <td colSpan="9" className="pou__td">
+                        Чуй область
+                    </td>
+                </tr>
+                {chuy.map((i) => (
+                    <React.Fragment key={i.number}>
+                        <tr className="pou__tr">
+                            <td className="pou__td">{i.number}</td>
+                            <td className="pou__td">{i.name}</td>
+                            <td className="pou__td">{i.place}</td>
+                            <td className="pou__td">{i.phone ? `+996${i.phone}` : t("Opdx.answer")}</td>
+                            <td className="pou__td">{i.people ? i.people : t("Opdx.answer")}</td>
+                            <td className="pou__td">{i.products[0]}</td>
+                            <td className="pou__td">{i.products[1]}</td>
+                            <td className="pou__td">
+                                <table className="nested-table">
+                                    <tbody>
+                                    {i.products[2].map((a, index) => (
+                                        <tr key={index}>
+                                            <td colSpan={1} className="opdx__products pou__td">{a}</td>
+                                        </tr>
+                                    ))}
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td className="pou__td">
+                                <table className="nested-table">
+                                    <tbody>
+                                    {i.products[3].map((a, index) => (
+                                        <tr key={index}>
+                                            <td className=" opdx__products pou__td">{a}</td>
+                                        </tr>
+                                    ))}
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </React.Fragment>
+                ))}
+                <tr className="pou__tr">
+                    <td colSpan="9" className="pou__td">
+                        Талас область
+                    </td>
+                </tr>
+                {talas.map((i) => (
+                    <React.Fragment key={i.number}>
+                        <tr className="pou__tr">
+                            <td className="pou__td">{i.number}</td>
+                            <td className="pou__td">{i.name}</td>
+                            <td className="pou__td">{i.place}</td>
+                            <td className="pou__td">{i.phone ? `+996${i.phone}` : t("Opdx.answer")}</td>
+                            <td className="pou__td">{i.people ? i.people : t("Opdx.answer")}</td>
+                            <td className="pou__td">{i.products[0]}</td>
+                            <td className="pou__td">{i.products[1]}</td>
+                            <td className="pou__td">
+                                <table className="nested-table">
+                                    <tbody>
+                                    {i.products[2].map((a, index) => (
+                                        <tr key={index}>
+                                            <td colSpan={1} className="opdx__products pou__td">{a}</td>
+                                        </tr>
+                                    ))}
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td className="pou__td">
+                                <table className="nested-table">
+                                    <tbody>
+                                    {i.products[3].map((a, index) => (
+                                        <tr key={index}>
+                                            <td className=" opdx__products pou__td">{a}</td>
+                                        </tr>
+                                    ))}
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </React.Fragment>
+                ))}
+                <tr className="pou__tr">
+                    <td colSpan="9" className="pou__td">
+                        Нарын область
+                    </td>
+                </tr>
+                {naryn.map((i) => (
+                    <React.Fragment key={i.number}>
+                        <tr className="pou__tr">
+                            <td className="pou__td">{i.number}</td>
+                            <td className="pou__td">{i.name}</td>
+                            <td className="pou__td">{i.place}</td>
+                            <td className="pou__td">{i.phone ? `+996${i.phone}` : t("Opdx.answer")}</td>
+                            <td className="pou__td">{i.people ? i.people : t("Opdx.answer")}</td>
+                            <td className="pou__td">{i.products[0]}</td>
+                            <td className="pou__td">{i.products[1]}</td>
+                            <td className="pou__td">
+                                <table className="nested-table">
+                                    <tbody>
+                                    {i.products[2].map((a, index) => (
+                                        <tr key={index}>
+                                            <td colSpan={1} className="opdx__products pou__td">{a}</td>
+                                        </tr>
+                                    ))}
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td className="pou__td">
+                                <table className="nested-table">
+                                    <tbody>
+                                    {i.products[3].map((a, index) => (
+                                        <tr key={index}>
+                                            <td className=" opdx__products pou__td">{a}</td>
+                                        </tr>
+                                    ))}
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </React.Fragment>
+                ))}
+            </table>
             <h1 className="title">
                 Информация по пилотным хозяйствам ДОСХ 2023г.
             </h1>
