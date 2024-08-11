@@ -56,49 +56,9 @@ const Header = () => {
                             <NavLink to='/depor' className="header__link">{t("Header.link1")}</NavLink>
                         </li>
                         <li className="header__item">
-                            <div className="header__thing">
-                                <NavLink to='/organic' className="header__link">
-                                    {t("Header.link2")}
-                                </NavLink>
-                                <img src={arrow} alt="triangle" onClick={() => setList(!list)} className={`header__triangle ${list ? 'header__triangle-active': ''}`}/>
-                            </div>
-                            <ul className={`header__areas ${list ?'header__areas-active': ''}`}>
-                                <li>
-                                    <NavLink onClick={setStart(1)} to="/organic/Chuy" className="header__link header__link-mini">
-                                        Чуй
-                                    </NavLink>
-                                </li>
-                                <li>
-                                    <NavLink onClick={setStart(1)} to="/organic/Naryn" className="header__link header__link-mini">
-                                        Нарын
-                                    </NavLink>
-                                </li>
-                                <li>
-                                    <NavLink onClick={setStart(1)} to="/organic/IssykKul" className="header__link header__link-mini">
-                                        Ысык-Көл
-                                    </NavLink>
-                                </li>
-                                <li>
-                                    <NavLink onClick={setStart(1)} to="/organic/Talas" className="header__link header__link-mini">
-                                        Талас
-                                    </NavLink>
-                                </li>
-                                <li>
-                                    <NavLink onClick={setStart(1)} to="/organic/Batken" className="header__link header__link-mini">
-                                        Баткен
-                                    </NavLink>
-                                </li>
-                                <li>
-                                    <NavLink onClick={setStart(1)} to="/organic/DjalalAbad" className="header__link header__link-mini">
-                                        Джалал-Абад
-                                    </NavLink>
-                                </li>
-                                <li>
-                                    <NavLink onClick={setStart(1)} to="/organic/Osh" className="header__link header__link-mini">
-                                        Ош
-                                    </NavLink>
-                                </li>
-                            </ul>
+                            <NavLink to='/organic' className="header__link">
+                                {t("Header.link2")}
+                            </NavLink>
                         </li>
                         <li className="header__item">
                             <NavLink to='/makers' className="header__link">

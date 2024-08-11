@@ -9,6 +9,961 @@ import { Pagination, Autoplay, Navigation } from 'swiper/modules';
 const Year2022 = () => {
     return (
         <>
+            {/*<table className="pou__table">*/}
+            {/*    <tr className="pou__tr">*/}
+            {/*        <td colSpan="8" className="opdx__td pou__td-title">*/}
+            {/*            Информация по пилотным хозяйствам ДОСХ 2022.*/}
+            {/*        </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="pou__tr">*/}
+            {/*        <td className="opdx__td">№ свидет-ва</td>*/}
+            {/*        <td className="opdx__td">Ф.И.О фермера и районы</td>*/}
+            {/*        <td className="opdx__td">Наименование хозяйства</td>*/}
+            {/*        <td className="opdx__td">Продукт</td>*/}
+            {/*        <td className="opdx__td">Общая Га орг. Земли</td>*/}
+            {/*        <td className="opdx__td">Количество животных</td>*/}
+            {/*        <td className="opdx__td">Производство(в тоннах/штук)</td>*/}
+            {/*        <td className="opdx__td">Экспорт(в тоннах)</td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="pou__tr">*/}
+            {/*        <td colSpan="8" className="opdx__td">*/}
+            {/*            Баткенская область*/}
+            {/*        </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="pou__tr">*/}
+            {/*        <td className="opdx__td" rowSpan="3">№1 <br/> 30.08. <br/> 2019г</td>*/}
+            {/*        <td className="opdx__td" rowSpan="3">Садыков К. Баткен</td>*/}
+            {/*        <td className="opdx__td" rowSpan="3">"Топоз-Баткен"</td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            Як*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            700*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            6 мяса*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="opdx__tr">*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            Абрикос*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            5*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            50*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="opdx__tr">*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            Яблоко*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            2*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            20*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="pou__tr">*/}
+            {/*        <td className="opdx__td" rowSpan="3">№2 <br/> 30.08. <br/> 2019г</td>*/}
+            {/*        <td className="opdx__td" rowSpan="3">Курсанбаев Кадамжай</td>*/}
+            {/*        <td className="opdx__td" rowSpan="3">"Орозбек";</td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            Корова*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            58*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            7 мяса, 25 молока*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="pou__tr">*/}
+            {/*    <td className="opdx__td">*/}
+            {/*        Абрикос*/}
+            {/*    </td>*/}
+            {/*    <td className="opdx__td">*/}
+            {/*        6*/}
+            {/*    </td>*/}
+            {/*    <td className="opdx__td">*/}
+            {/*        -*/}
+            {/*    </td>*/}
+            {/*    <td className="opdx__td">*/}
+            {/*        60*/}
+            {/*    </td>*/}
+            {/*    <td className="opdx__td">*/}
+            {/*        -*/}
+            {/*    </td>*/}
+            {/*</tr>*/}
+            {/*    <tr className="pou__tr">*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            Яблоко*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            10*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            100*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="pou__tr">*/}
+            {/*        <td className="opdx__td" rowSpan="2">№18</td>*/}
+            {/*        <td className="opdx__td" rowSpan="2">Акматалиев Баткен</td>*/}
+            {/*        <td className="opdx__td" rowSpan="2">Алыш-Дан</td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            Абрикос/Сушеный абрикос*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            100*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            70(Абр.)/80(Суш.А.)*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            130*/}
+            {/*        </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="opdx__tr">*/}
+            {/*    <td className="opdx__td">*/}
+            {/*        Яблоко*/}
+            {/*    </td>*/}
+            {/*    <td className="opdx__td">*/}
+            {/*        25*/}
+            {/*    </td>*/}
+            {/*    <td className="opdx__td">*/}
+            {/*        -*/}
+            {/*    </td>*/}
+            {/*    <td className="opdx__td">*/}
+            {/*        250*/}
+            {/*    </td>*/}
+            {/*    <td className="opdx__td">*/}
+            {/*        -*/}
+            {/*    </td>*/}
+            {/*</tr>*/}
+            {/*    <tr className="pou__tr">*/}
+            {/*        <td className="opdx__td" rowSpan="4">№4 <br/> 30.08. <br/> 2019г</td>*/}
+            {/*        <td className="opdx__td" rowSpan="4">Абдиназаров Лейлек</td>*/}
+            {/*        <td className="opdx__td" rowSpan="4">"Кутчу-Дан"</td>*/}
+            {/*        <td className="opdx__td">Корова/Овцы/Лошадь</td>*/}
+            {/*        <td className="opdx__td">-</td>*/}
+            {/*        <td className="opdx__td">410</td>*/}
+            {/*        <td className="opdx__td">5 мяса</td>*/}
+            {/*        <td className="opdx__td">-</td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="opdx__tr">*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            Курица*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            600*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            48000 яйиц*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="opdx__tr">*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            Пшеница*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            2*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            22*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="opdx__tr">*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            Яблоко*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            1*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            13*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="pou__tr">*/}
+            {/*        <td className="opdx__td" rowSpan="3">№5 <br/> 30.08. <br/> 2019г</td>*/}
+            {/*        <td className="opdx__td" rowSpan="3">Базарбаев С. Лейлек</td>*/}
+            {/*        <td className="opdx__td" rowSpan="3">"Гордой"</td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            Картошка*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            1*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            14*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="opdx__tr">*/}
+            {/*    <td className="opdx__td">*/}
+            {/*        Пшеница*/}
+            {/*    </td>*/}
+            {/*    <td className="opdx__td">*/}
+            {/*        2*/}
+            {/*    </td>*/}
+            {/*    <td className="opdx__td">*/}
+            {/*        -*/}
+            {/*    </td>*/}
+            {/*    <td className="opdx__td">*/}
+            {/*        18*/}
+            {/*    </td>*/}
+            {/*    <td className="opdx__td">*/}
+            {/*        -*/}
+            {/*    </td>*/}
+            {/*</tr>*/}
+            {/*    <tr className="opdx__tr">*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            Люцерна*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            1*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            8*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="pou__tr">*/}
+            {/*        <td className="opdx__td">№3 <br/> 30.08. <br/> 2019г</td>*/}
+            {/*        <td className="opdx__td">Акбаров Ш. Лейлек</td>*/}
+            {/*        <td className="opdx__td">"Нектар-Алга"</td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            Персик*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            12*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            10*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="pou__tr">*/}
+            {/*        <td className="opdx__td" rowSpan="9"></td>*/}
+            {/*        <td className="opdx__td" rowSpan="9">Итого:</td>*/}
+            {/*        <td className="opdx__td" rowSpan="9">6 пилоттук хоз.</td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            Курица*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            600*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            48000 яйиц*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="opdx__tr">*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            Корова*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            64*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            7 мяса, 25 молока*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="opdx__tr">*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            Як*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            700*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            6 мяса*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="opdx__tr">*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            Картошка*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            1*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            14*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="opdx__tr">*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            Абрикос*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            111*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            70*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="opdx__tr">*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            Пшеница*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            4*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            40*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="opdx__tr">*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            Люцерна*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            1*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            8*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="opdx__tr">*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            Яблоко*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            38*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            13*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="opdx__tr">*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            Персик*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            12*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            10*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="pou__tr">*/}
+            {/*        <td colSpan="8" className="opdx__td">*/}
+            {/*            Иссык-Кульская область*/}
+            {/*        </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="pou__tr">*/}
+            {/*        <td className="opdx__td">№7 <br/> 13.09. <br/> 2019г</td>*/}
+            {/*        <td className="opdx__td">былкасымов Жети-Өгүз</td>*/}
+            {/*        <td className="opdx__td">"Кут Дарык" ОСОО</td>*/}
+            {/*        <td className="opdx__td">Яблоко</td>*/}
+            {/*        <td className="opdx__td">2,5</td>*/}
+            {/*        <td className="opdx__td">-</td>*/}
+            {/*        <td className="opdx__td">13</td>*/}
+            {/*        <td className="opdx__td">-</td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="pou__tr">*/}
+            {/*        <td className="opdx__td" rowSpan="2">№8</td>*/}
+            {/*        <td className="opdx__td" rowSpan="2">Сарыгулов Т. Жети-Огуз</td>*/}
+            {/*        <td className="opdx__td" rowSpan="2">Тосор-Мурутчан</td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            Абрикос*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            2*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            10*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="opdx__tr">*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            Яблоко*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            3*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            15*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="pou__tr">*/}
+            {/*        <td className="opdx__td" rowSpan="2">№10</td>*/}
+            {/*        <td className="opdx__td" rowSpan="2">Бектемиров И. Ак-Суу</td>*/}
+            {/*        <td className="opdx__td" rowSpan="2">Имаш</td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*        Пшеница*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*        5*/}
+            {/*    </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*        -*/}
+            {/*    </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*        2,4*/}
+            {/*    </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*        -*/}
+            {/*    </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="opdx__tr">*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            Люцерна*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            1*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            6*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="pou__tr">*/}
+            {/*        <td className="opdx__td" rowSpan="5">№12 <br/> 13.09. <br/> 2019г</td>*/}
+            {/*        <td className="opdx__td" rowSpan="5">Молдогазиев Тон</td>*/}
+            {/*        <td className="opdx__td" rowSpan="5">Албан Асем</td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            Кукуруза*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            3*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            30*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="opdx__tr">*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            Ячмень*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            2,3*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            7*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="opdx__tr">*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            Абрикос*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            2*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            12*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="opdx__tr">*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            Люцерна*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            2,5*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            15*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="opdx__tr">*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            Яблоко*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            236,02*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            892*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="pou__tr">*/}
+            {/*        <td className="opdx__td" rowSpan="2">№85 <br/> 17.04. <br/> 2021г</td>*/}
+            {/*        <td className="opdx__td" rowSpan="2">Рысмендиева А. Ак-Суу</td>*/}
+            {/*        <td className="opdx__td" rowSpan="2">"Ак-Суу органик" кооператив</td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            Картошка*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            300*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            3000*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="opdx__tr">*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            Абрикос*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            210*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            950*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="pou__tr">*/}
+            {/*        <td className="opdx__td">№93 <br/> 10.08. <br/> 2021г</td>*/}
+            {/*        <td className="opdx__td">Касымов М. Ак-Суу р-у</td>*/}
+            {/*        <td className="opdx__td">"Темирлан Агросервис" кооператив Ак-Суу р-у</td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            Яблоко*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            10*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            60*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="pou__tr">*/}
+            {/*        <td className="opdx__td" rowSpan="4">№94 <br/> 10.08. <br/> 2021г</td>*/}
+            {/*        <td className="opdx__td" rowSpan="4">Базаркулов Т. Жети-Өгүз р-у</td>*/}
+            {/*        <td className="opdx__td" rowSpan="4">"Тосор органик" кооператив</td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            Абрикос*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            50*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            250*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="opdx__tr">*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            Люцерна*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            44*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            264*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="opdx__tr">*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            Овощной*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            100*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            200*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="opdx__tr">*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            Яблоко*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            100*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            500*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="pou__tr">*/}
+            {/*        <td className="opdx__td">№95 <br/> 10.08. <br/> 2021г</td>*/}
+            {/*        <td className="opdx__td">Шаршембиев Э. Түп р-у</td>*/}
+            {/*        <td className="opdx__td">Теплица</td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            Теплица*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            0,04*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            2*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="pou__tr">*/}
+            {/*        <td className="opdx__td">№96 <br/> 10.08. <br/> 2021г</td>*/}
+            {/*        <td className="opdx__td">Билалова Жаңыл Ысык-Көл р-у</td>*/}
+            {/*        <td className="opdx__td">ч/ф</td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            Люцерна*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            2,1*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            12*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="pou__tr">*/}
+            {/*        <td className="opdx__td" rowSpan="3">№97 <br/> 10.08. <br/> 2021г</td>*/}
+            {/*        <td className="opdx__td" rowSpan="3">Токомбаев А. Ак-Суу</td>*/}
+            {/*        <td className="opdx__td" rowSpan="3">"Маман органик" кооператив Ак-Суйский р-у</td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            Абрикос*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            110*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            550*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="opdx__tr">*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            Овощной*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            110*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            220*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="opdx__tr">*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            Яблоко*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            120*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            600*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="pou__tr">*/}
+            {/*        <td className="opdx__td" rowSpan="2">№98 <br/> 10.08. <br/> 2021г</td>*/}
+            {/*        <td className="opdx__td" rowSpan="2">Бухара элдияр Тон</td>*/}
+            {/*        <td className="opdx__td" rowSpan="2">к/х "Бухара" тоң р-у</td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            Картошка*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            1*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            1*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="opdx__tr">*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            Овощной*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            4,55*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            1*/}
+            {/*        </td>*/}
+            {/*        <td className="opdx__td">*/}
+            {/*            -*/}
+            {/*        </td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="pou__tr">*/}
+            {/*        <td className="opdx__td">№ свидет-ва</td>*/}
+            {/*        <td className="opdx__td">Ф.И.О фермера и районы</td>*/}
+            {/*        <td className="opdx__td">Наименование хозяйства</td>*/}
+            {/*        <td className="opdx__td">Продукт</td>*/}
+            {/*        <td className="opdx__td">Общая Га орг. Земли</td>*/}
+            {/*        <td className="opdx__td">Количество животных</td>*/}
+            {/*        <td className="opdx__td">Производство(в тоннах/штук)</td>*/}
+            {/*        <td className="opdx__td">Экспорт(в тоннах)</td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="pou__tr">*/}
+            {/*        <td className="opdx__td">№ свидет-ва</td>*/}
+            {/*        <td className="opdx__td">Ф.И.О фермера и районы</td>*/}
+            {/*        <td className="opdx__td">Наименование хозяйства</td>*/}
+            {/*        <td className="opdx__td">Продукт</td>*/}
+            {/*        <td className="opdx__td">Общая Га орг. Земли</td>*/}
+            {/*        <td className="opdx__td">Количество животных</td>*/}
+            {/*        <td className="opdx__td">Производство(в тоннах/штук)</td>*/}
+            {/*        <td className="opdx__td">Экспорт(в тоннах)</td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="pou__tr">*/}
+            {/*        <td className="opdx__td">№ свидет-ва</td>*/}
+            {/*        <td className="opdx__td">Ф.И.О фермера и районы</td>*/}
+            {/*        <td className="opdx__td">Наименование хозяйства</td>*/}
+            {/*        <td className="opdx__td">Продукт</td>*/}
+            {/*        <td className="opdx__td">Общая Га орг. Земли</td>*/}
+            {/*        <td className="opdx__td">Количество животных</td>*/}
+            {/*        <td className="opdx__td">Производство(в тоннах/штук)</td>*/}
+            {/*        <td className="opdx__td">Экспорт(в тоннах)</td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="pou__tr">*/}
+            {/*        <td className="opdx__td">№ свидет-ва</td>*/}
+            {/*        <td className="opdx__td">Ф.И.О фермера и районы</td>*/}
+            {/*        <td className="opdx__td">Наименование хозяйства</td>*/}
+            {/*        <td className="opdx__td">Продукт</td>*/}
+            {/*        <td className="opdx__td">Общая Га орг. Земли</td>*/}
+            {/*        <td className="opdx__td">Количество животных</td>*/}
+            {/*        <td className="opdx__td">Производство(в тоннах/штук)</td>*/}
+            {/*        <td className="opdx__td">Экспорт(в тоннах)</td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="pou__tr">*/}
+            {/*        <td className="opdx__td">№ свидет-ва</td>*/}
+            {/*        <td className="opdx__td">Ф.И.О фермера и районы</td>*/}
+            {/*        <td className="opdx__td">Наименование хозяйства</td>*/}
+            {/*        <td className="opdx__td">Продукт</td>*/}
+            {/*        <td className="opdx__td">Общая Га орг. Земли</td>*/}
+            {/*        <td className="opdx__td">Количество животных</td>*/}
+            {/*        <td className="opdx__td">Производство(в тоннах/штук)</td>*/}
+            {/*        <td className="opdx__td">Экспорт(в тоннах)</td>*/}
+            {/*    </tr>*/}
+            {/*    <tr className="pou__tr">*/}
+            {/*        <td className="opdx__td">№ свидет-ва</td>*/}
+            {/*        <td className="opdx__td">Ф.И.О фермера и районы</td>*/}
+            {/*        <td className="opdx__td">Наименование хозяйства</td>*/}
+            {/*        <td className="opdx__td">Продукт</td>*/}
+            {/*        <td className="opdx__td">Общая Га орг. Земли</td>*/}
+            {/*        <td className="opdx__td">Количество животных</td>*/}
+            {/*        <td className="opdx__td">Производство(в тоннах/штук)</td>*/}
+            {/*        <td className="opdx__td">Экспорт(в тоннах)</td>*/}
+            {/*    </tr>*/}
+            {/*</table>*/}
+
                 <h1 className="title">
                     Информация по пилотным хозяйствам ДОСХ 2022г.
                 </h1>

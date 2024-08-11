@@ -1,9 +1,67 @@
 .OAD{
   padding: 50px 0;
+  position: relative;
+  height: calc(100% - 353px - 50px - 229px);
+  &__menu{
+    background: white;
+    border: 2px #000 solid;
+    padding: 20px;
+    width: 30%;
+    height: 100%;
+    z-index: 1;
+  }
+  &__item{
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  &__area{
+    cursor: pointer;
+    font-size: 18px;
+    &-active{
+      color: #006400;
+    }
+  }
+  &__areas{
+    transform: translateY(-100%);
+    text-align: left;
+    display: none;
+    &-active{
+      display: block;
+      transform: translateY(0);
+    }
+  }
   .title{
     text-align: center;
     margin-bottom: 25px;
 }
+  &__top{
+    margin-top: 1300px;
+  }
+  &__lower{
+    margin-top: 400px;
+  }
+  &__thing{
+    .OAD__cart{
+      max-width: 60%;
+      position: absolute;
+      right: 4%;
+      top: 140px;
+      &s{
+        display: flex;
+        column-gap: 20px;
+        flex-direction: column;
+        position: absolute;
+        right: 4%;
+        top: 140px;
+        max-width: 50%;
+        .OAD__cart{
+          position: relative;
+          top: auto;
+          right: auto;
+        }
+      }
+    }
+  }
   &__cart{
     display: flex;
     align-items: center;
@@ -41,7 +99,7 @@
     align-items: center;
     z-index: 1;
     position: absolute;
-    top: 0;
+    top: -10px;
     margin: 0 auto;
 }
 }
@@ -55,11 +113,54 @@
     font-size: 17px;
 }
   &__title{
-    font-size: 14px;
+    font-size: 7px;
 }
+  &__desk{
+    font-size: 10px;
+  }
   &__td{
-    padding: 15px 3px;
-    font-size: 12px;
+    padding: 10px 1px;
+    font-size: 10px;
+}
+  &__item{
+    font-size: 10px ;
+  }
+  &__area{
+    font-size: 7px;
+  }
+  &__top{
+    margin-top: 650px;
+  }
+  &__lower{
+    margin-top: 200px;
+  }
 }
 }
+
+@media (max-width: 425px) {
+  .OAD{
+    &__td {
+      font-size: 8px;
+    }
+    &__top{
+      margin-top: 550px;
+    }
+    &__lower{
+      margin-top: 100px;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .OAD{
+    .title{
+      font-size: 15px;
+    }
+    &__title{
+      font-size: 5px;
+    }
+    &__td{
+      font-size: 7px;
+    }
+  }
 }

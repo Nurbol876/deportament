@@ -216,6 +216,8 @@
 @media (max-width: 480px) {
   .logo__title{
     font-size: 12px;
+    left: 26% !important;
+    max-width: 200px !important;
   }
   .header__menu{
     right: 0;

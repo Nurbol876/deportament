@@ -6,6 +6,8 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Pagination, Autoplay, Navigation } from 'swiper/modules';
 import {useTranslation} from "react-i18next";
+import {NavLink} from "react-router-dom";
+import arrow from "../../../components/Header/assets/arrow.svg";
 
 const Year2023 = ({ year }) => {
 
@@ -335,9 +337,6 @@ const Year2023 = ({ year }) => {
                     </React.Fragment>
                 ))}
             </table>
-            <h1 className="title">
-                Информация по пилотным хозяйствам ДОСХ 2023г.
-            </h1>
         </>
     );
 };

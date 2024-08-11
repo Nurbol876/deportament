@@ -13,7 +13,6 @@
 }
 
 .container{
-  max-width: 1140px;
   padding: 0 40px;
   margin: 0 auto;
 }
@@ -83,6 +82,7 @@ img{
 
 @media (max-width: 375px) {
   .container{
+    max-width: 335px;
     padding: 0 20px;
   }
 }

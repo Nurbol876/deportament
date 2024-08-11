@@ -5,7 +5,8 @@
   &__maps{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    column-gap: 30px;
     margin-top: 35px;
   }
 }
