@@ -11,6 +11,9 @@ i18n
         fallbackLng:"kg",
         whitelist: ["ru", "kg"],
         debug: false,
+        backend: {
+          loadPath: '../public/Locales/{{lng}}.json',
+       },
         detection: {
             order: ["localStorage", "cookie"],
             caches: ["localStorage", "cookie"]
